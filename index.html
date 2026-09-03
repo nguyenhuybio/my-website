@@ -4,63 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinh-Huy Nguyen | Research Portfolio</title>
+    <title>Dinh-Huy Nguyen, Ph.D. | Academic Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 40px 20px; background-color: #f9f9f9; }
-        .header { display: flex; align-items: center; justify-content: space-between; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .intro { flex: 1; padding-right: 30px; }
-        .intro h1 { margin: 0; color: #2c3e50; font-size: 2.5em; }
-        .intro p { font-size: 1.1em; color: #555; }
-        .avatar { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 5px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .social-links { margin-top: 20px; }
-        .social-links a { margin-right: 15px; font-size: 1.5em; color: #3498db; text-decoration: none; transition: 0.3s; }
-        .social-links a:hover { color: #2980b9; transform: translateY(-3px); }
-        h2 { border-bottom: 2px solid #3498db; display: inline-block; padding-bottom: 5px; color: #2c3e50; margin-top: 40px; }
-        .pub-item { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 5px solid #3498db; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
-        .tag { background: #e8f4fd; color: #3498db; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; }
+        :root { --primary: #2c3e50; --secondary: #3498db; --accent: #e74c3c; --bg: #f4f7f6; }
+        body { font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: var(--primary); max-width: 1000px; margin: 0 auto; padding: 40px 20px; background-color: var(--bg); }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        .header { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+        .avatar { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .bio-text { flex: 1; min-width: 300px; }
+        .bio-text h1 { margin: 0; font-size: 2.5em; color: var(--primary); }
+        .social-links { margin-top: 20px; display: flex; gap: 15px; }
+        .social-links a { font-size: 1.5em; color: var(--secondary); text-decoration: none; transition: 0.3s; }
+        .social-links a:hover { transform: translateY(-3px); color: var(--primary); }
+        
+        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; color: var(--primary); font-size: 1.8em; }
+        .item { padding: 15px; border-bottom: 1px solid #eee; transition: 0.2s; }
+        .item:hover { background: #fcfcfc; }
+        .item-title { font-weight: bold; font-size: 1.1em; color: #333; display: block; }
+        .item-meta { font-size: 0.9em; color: #666; margin: 5px 0; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: bold; margin-bottom: 5px; }
+        .tag-journal { background: #e1f5fe; color: #0288d1; }
+        .tag-patent { background: #fff3e0; color: #ef6c00; }
+        .cite-count { color: var(--accent); font-weight: bold; font-size: 0.85em; }
+        
+        @media (max-width: 600px) { .header { justify-content: center; text-align: center; } .avatar { margin: 0 auto; } }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="intro">
-            <h1>Hello 👋</h1>
-            <p>This is the personal website of <strong>Dinh-Huy Nguyen, Ph.D.</strong></p>
-            <p>Postdoctoral Researcher at Chonnam National University, South Korea.<br>
-            Specializing in <strong>Bacteria-mediated Cancer Immunotherapy</strong>.</p>
+
+    <div class="card header">
+        <img src="huy-avatar.jpg" alt="Dinh-Huy Nguyen" class="avatar">
+        <div class="bio-text">
+            <h1>Dinh-Huy Nguyen, Ph.D.</h1>
+            <p><strong>Research Professor</strong> tại Chonnam National University Hwasun Hospital</p>
+            <p>Chuyên gia về <em>Bacteria-mediated Cancer Immunotherapy</em>. Nghiên cứu của tôi tập trung vào việc lập trình vi khuẩn Salmonella thành các "cỗ máy vận chuyển thuốc" chính xác để tiêu diệt khối u.</p>
             <div class="social-links">
-                <a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="mailto:nguyenhuybio@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ" title="Google Scholar"><i class="fas fa-graduation-cap"></i> Scholar</a>
+                <a href="mailto:nguyenhuybio@gmail.com" title="Email"><i class="fas fa-envelope"></i> Email</a>
             </div>
         </div>
-        <!-- Sau này anh sẽ thay link ảnh của anh vào đây -->
-        <<img src="huy-avatar.jpg" alt="Dinh-Huy Nguyen" class="avatar">
     </div>
 
-    <h2>About My Research</h2>
-    <p>My work involves engineering <em>Salmonella typhimurium</em> as a precision drug delivery vehicle to target and treat malignant tumors. This research aligns with the <strong>National Cancer Moonshot Initiative</strong> to improve survival rates and reduce treatment toxicity.</p>
-
-    <h2>Selected Publications</h2>
-    <div class="pub-item">
-        <span class="tag">Nature Communications (2024)</span><br>
-        <strong>Engineered Salmonella-mediated dual-drug delivery...</strong><br>
-        Nguyen D.H., et al. | <a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ">View Paper</a>
+    <h2><i class="fas fa-book-open"></i> Journal Publications</h2>
+    <div class="card">
+        <!-- 2026 -->
+        <div class="item">
+            <span class="tag tag-journal">2026</span>
+            <span class="item-title">Calreticulin-targeting L-asparaginase-flagellin conjugate enhances Salmonella-mediated antitumor efficacy</span>
+            <div class="item-meta">Cell Death Discovery | Nguyen D.H., et al.</div>
+        </div>
+        <div class="item">
+            <span class="tag tag-journal">2026</span>
+            <span class="item-title">A clinically translatable, irreversibly attenuated Salmonella strain as a next-generation adjuvant for checkpoint immunotherapy</span>
+            <div class="item-meta">Theranostics 16 (13), 7139 | Nguyen D.H., et al.</div>
+        </div>
+        
+        <!-- 2024 -->
+        <div class="item">
+            <span class="tag tag-journal">2024</span>
+            <span class="item-title">Reprogramming the tumor immune microenvironment using engineered dual-drug loaded Salmonella</span>
+            <div class="item-meta">Nature Communications 15 (1), 6680 | Nguyen D.H., et al. <span class="cite-count">[70+ Citations]</span></div>
+        </div>
+        <div class="item">
+            <span class="tag tag-journal">2024</span>
+            <span class="item-title">Tumor Pre-Targeting System Using Streptavidin-Expressing Bacteria</span>
+            <div class="item-meta">Molecular Imaging and Biology 26 (4) | Kwon S.Y., ..., Nguyen D.H.</div>
+        </div>
+        
+        <!-- 2023 -->
+        <div class="item">
+            <span class="tag tag-journal">2023</span>
+            <span class="item-title">Bioengineering of bacteria for cancer immunotherapy</span>
+            <div class="item-meta">Nature Communications 14 (1), 3553 | Nguyen D.H., et al. <span class="cite-count">[170+ Citations]</span></div>
+        </div>
+        <div class="item">
+            <span class="tag tag-journal">2023</span>
+            <span class="item-title">Synergistic cancer immunotherapy utilizing programmed Salmonella typhimurium secreting flagellin B conjugated to IL-15</span>
+            <div class="item-meta">Biomaterials 298, 122135 | Zhang Y., ..., Nguyen D.H. <span class="cite-count">[40+ Citations]</span></div>
+        </div>
+        
+        <p style="text-align: center;"><a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ">Xem toàn bộ 20+ bài báo trên Google Scholar &raquo;</a></p>
     </div>
-    <div class="pub-item">
-        <span class="tag">Nature Communications (2023)</span><br>
-        <strong>Programmable bacteria for precision oncology...</strong><br>
-        Nguyen D.H., et al. | <a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ">View Paper</a>
+
+    <h2><i class="fas fa-certificate"></i> Patents</h2>
+    <div class="card">
+        <div class="item">
+            <span class="tag tag-patent">US Patent (2025)</span>
+            <span class="item-title">Pharmaceutical Composition Comprising Salmonella Strain and Immune Checkpoint Inhibitor for Prevention or Treatment of Cancer</span>
+            <div class="item-meta">US20250041355A1 | Min N.D., Huy S.H. (Jung-joon Hong, Yeongjin You)</div>
+        </div>
+        <div class="item">
+            <span class="tag tag-patent">US Patent (2024)</span>
+            <span class="item-title">SALMONELLA STRAIN FOR PREVENTION AND TREATMENT OF CANCER AND USE THEREOF</span>
+            <div class="item-meta">US20240390428A1 | Min N.D., Huy S.H.</div>
+        </div>
+        <div class="item">
+            <span class="tag tag-patent">EP Patent (2024)</span>
+            <span class="item-title">Pharmaceutical composition comprising Salmonella strain as active ingredient</span>
+            <div class="item-meta">EP4427755A1 | European Patent Office</div>
+        </div>
+        <div class="item">
+            <span class="tag tag-patent">AU Patent (2023)</span>
+            <span class="item-title">Salmonella strain for treating cancer and use thereof</span>
+            <div class="item-meta">AU2020454144A1 | Australian Patent Office</div>
+        </div>
     </div>
 
-    <footer style="margin-top: 50px; text-align: center; color: #888; font-size: 0.8em;">
-        &copy; 2024 Dinh-Huy Nguyen. Built with GitHub Pages.
+    <footer style="text-align: center; color: #888; padding: 40px 0;">
+        &copy; 2024 Dinh-Huy Nguyen. Built for Academic Impact.
     </footer>
+
 </body>
-```html
-    <div class="pub-item">
-        <span class="tag">Theranostics(2026)</span><br>
-        <strong>A clinically translatable, irreversibly attenuated Salmonella strain as a next-generation adjuvant for checkpoint immunotherapy </strong><br>
-        Nguyen D.H., et al. | <a href="https://www.thno.org/v16p7139.htm">View Paper</a>
-    </div>
+</html>
 ```
