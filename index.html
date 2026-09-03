@@ -16,10 +16,11 @@
         .bio-text { flex: 1; min-width: 300px; }
         .bio-text h1 { margin: 0; font-size: 2.8em; color: var(--primary); letter-spacing: -1px; }
         .social-links { margin-top: 20px; display: flex; gap: 20px; }
-        .social-links a { font-size: 1.6em; color: var(--secondary); text-decoration: none; transition: 0.3s; }
+        .social-links a { font-size: 1.3em; color: var(--secondary); text-decoration: none; transition: 0.3s; font-weight: 600; }
+        .social-links a i { margin-right: 8px; }
         .social-links a:hover { transform: translateY(-3px); color: var(--primary); }
         
-        h2 { border-left: 6px solid var(--secondary); padding-left: 15px; margin-top: 50px; color: var(--primary); font-size: 1.8em; text-transform: uppercase; letter-spacing: 1px; }
+        h2 { border-left: 6px solid var(--secondary); padding-left: 15px; margin-top: 50px; color: var(--primary); font-size: 1.6em; text-transform: uppercase; letter-spacing: 1px; }
         .item { padding: 20px; border-bottom: 1px solid #edf2f7; transition: 0.2s; position: relative; }
         .item:last-child { border-bottom: none; }
         .item:hover { background: #fdfdfd; }
@@ -37,22 +38,21 @@
 
     <div class="card header">
         <div class="avatar-container">
-            <!-- Đảm bảo anh upload ảnh tên là huy-avatar.jpg lên GitHub -->
             <img src="huy-avatar.jpg" alt="Dinh-Huy Nguyen" class="avatar" onerror="this.src='https://via.placeholder.com/220?text=Upload+Photo'">
         </div>
         <div class="bio-text">
             <h1>Dinh-Huy Nguyen, Ph.D.</h1>
             <p style="font-size: 1.2em; color: #4a5568; margin-top: 5px;"><strong>Research Professor</strong> | Chonnam National University Hwasun Hospital</p>
-            <p>Chuyên gia về <strong>Bacteria-mediated Cancer Immunotherapy</strong>. Tôi tập trung vào việc lập trình vi khuẩn <em>Salmonella typhimurium</em> thành các hệ thống vận chuyển thuốc thông minh nhằm giải quyết các khối u kháng miễn dịch (cold tumors).</p>
+            <p>Specialist in <strong>Bacteria-mediated Cancer Immunotherapy</strong>. My research focuses on engineering <em>Salmonella typhimurium</em> as an intelligent drug delivery platform to overcome immune-resistant "cold" tumors and advance the **National Cancer Moonshot** goals.</p>
             <div class="social-links">
-                <a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i> Scholar</a>
-                <a href="mailto:nguyenhuybio@gmail.com" title="Email"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                <a href="mailto:nguyenhuybio@gmail.com"><i class="fas fa-envelope"></i> Contact Email</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </div>
     </div>
 
-    <h2><i class="fas fa-microscope section-icon"></i> Journal Publications</h2>
+    <h2><i class="fas fa-microscope section-icon"></i> Selected Publications</h2>
     <div class="card" style="padding: 0 20px;">
         <div class="item">
             <span class="tag tag-journal">2024</span>
@@ -74,19 +74,9 @@
             <span class="item-title">Synergistic cancer immunotherapy utilizing programmed Salmonella typhimurium secreting flagellin B...</span>
             <div class="item-meta">Biomaterials 298, 122135 | Nguyen D.H., et al. <span class="cite-badge">40 Citations</span></div>
         </div>
-        <div class="item">
-            <span class="tag tag-journal">2022</span>
-            <span class="item-title">Optimized doxycycline-inducible gene expression system for tumor-targeting bacteria</span>
-            <div class="item-meta">Molecular Imaging and Biology 24 (1) | Nguyen D.H., et al. <span class="cite-badge">28 Citations</span></div>
-        </div>
-        <div class="item">
-            <span class="tag tag-journal">2026</span>
-            <span class="item-title">Salmonella typhimurium co-expressing cytolysin A and hyaluronidase suppresses tumor growth</span>
-            <div class="item-meta">Cell Death Discovery 12 (1) | Nguyen D.H., et al.</div>
-        </div>
     </div>
 
-    <h2><i class="fas fa-file-signature section-icon"></i> Patents</h2>
+    <h2><i class="fas fa-file-signature section-icon"></i> Patents & Intellectual Property</h2>
     <div class="card" style="padding: 0 20px;">
         <div class="item">
             <span class="tag tag-patent">US Patent (2025)</span>
@@ -103,15 +93,10 @@
             <span class="item-title">PHARMACEUTICAL COMPOSITION COMPRISING SALMONELLA STRAIN</span>
             <div class="item-meta">European Patent Office EP4427755A1</div>
         </div>
-        <div class="item">
-            <span class="tag tag-patent">AU Patent (2023)</span>
-            <span class="item-title">Salmonella strain for treating cancer and use thereof</span>
-            <div class="item-meta">Australian Patent AU2021376085A1</div>
-        </div>
     </div>
 
     <footer style="text-align: center; color: #718096; padding: 40px 0; font-size: 0.9em;">
-        &copy; 2024 Dinh-Huy Nguyen, Ph.D. | <a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ" style="color: var(--secondary);">Full Scholar Profile</a>
+        &copy; 2024 Dinh-Huy Nguyen, Ph.D. | All Rights Reserved.
     </footer>
 
 </body>
