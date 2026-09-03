@@ -7,96 +7,144 @@
     <title>Dinh-Huy Nguyen, Ph.D. | Research Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #2c3e50; --secondary: #3498db; --accent: #e74c3c; --bg: #f8fafc; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--primary); max-width: 1000px; margin: 0 auto; padding: 40px 20px; background-color: var(--bg); }
-        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 30px; border: 1px solid #e2e8f0; }
-        .header { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
-        .avatar-container { position: relative; width: 220px; height: 220px; }
-        .avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 6px solid white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .bio-text { flex: 1; min-width: 300px; }
-        .bio-text h1 { margin: 0; font-size: 2.8em; color: var(--primary); letter-spacing: -1px; }
-        .social-links { margin-top: 20px; display: flex; gap: 20px; }
-        .social-links a { font-size: 1.3em; color: var(--secondary); text-decoration: none; transition: 0.3s; font-weight: 600; }
-        .social-links a i { margin-right: 8px; }
-        .social-links a:hover { transform: translateY(-3px); color: var(--primary); }
+        :root { --primary: #2c3e50; --secondary: #3498db; --accent: #e74c3c; --bg: #ffffff; --text-muted: #64748b; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--primary); max-width: 1000px; margin: 0 auto; padding: 40px 20px; background-color: var(--bg); }
         
-        h2 { border-left: 6px solid var(--secondary); padding-left: 15px; margin-top: 50px; color: var(--primary); font-size: 1.6em; text-transform: uppercase; letter-spacing: 1px; }
-        .item { padding: 20px; border-bottom: 1px solid #edf2f7; transition: 0.2s; position: relative; }
-        .item:last-child { border-bottom: none; }
-        .item:hover { background: #fdfdfd; }
-        .item-title { font-weight: 700; font-size: 1.15em; color: #1a202c; display: block; margin-bottom: 5px; }
-        .item-meta { font-size: 0.95em; color: #4a5568; margin: 5px 0; }
-        .tag { display: inline-block; padding: 3px 10px; border-radius: 5px; font-size: 0.75em; font-weight: 800; margin-bottom: 8px; text-transform: uppercase; }
-        .tag-journal { background: #ebf8ff; color: #2b6cb0; }
-        .tag-patent { background: #fffaf0; color: #c05621; }
-        .cite-badge { display: inline-block; background: #fed7d7; color: #c53030; padding: 2px 8px; border-radius: 12px; font-size: 0.8em; font-weight: bold; margin-left: 10px; }
+        /* Navigation & Header */
+        .header-card { text-align: center; padding: 40px 20px; margin-bottom: 50px; }
+        .avatar-container { margin-bottom: 25px; }
+        .avatar { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 5px solid #fff; }
         
-        .section-icon { margin-right: 10px; color: var(--secondary); }
+        .bio-info h1 { font-size: 3em; margin: 10px 0; letter-spacing: -1px; }
+        .role-title { font-size: 1.25em; color: var(--text-muted); margin-bottom: 20px; }
+        .bio-desc { max-width: 800px; margin: 0 auto 30px auto; font-size: 1.1em; color: #444; }
+
+        /* Icon to và Căn giữa */
+        .social-centered { display: flex; justify-content: center; gap: 40px; margin: 30px 0; }
+        .social-centered a { text-decoration: none; color: var(--secondary); display: flex; flex-direction: column; align-items: center; gap: 8px; transition: 0.3s; }
+        .social-centered a i { font-size: 2.5em; } /* Icon rất to */
+        .social-centered a span { font-weight: 600; font-size: 1em; }
+        .social-centered a:hover { transform: translateY(-5px); color: var(--primary); }
+
+        /* Section Styling */
+        h2 { font-size: 2em; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 60px; color: var(--primary); }
+        .item-list { margin-top: 20px; }
+        .item { padding: 20px 0; border-bottom: 1px solid #f1f5f9; transition: 0.2s; }
+        .item:hover { background-color: #fafafa; }
+        .item-title { font-weight: 700; font-size: 1.15em; color: #1e293b; display: block; margin-bottom: 5px; text-decoration: none; }
+        .item-title:hover { color: var(--secondary); }
+        .item-meta { font-size: 0.95em; color: var(--text-muted); }
+        
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; font-weight: bold; margin-right: 8px; text-transform: uppercase; }
+        .badge-journal { background: #e0f2fe; color: #0369a1; }
+        .badge-patent { background: #fef3c7; color: #92400e; }
+        .cite-tag { color: #ef4444; font-weight: bold; font-size: 0.85em; margin-left: 10px; }
+
+        @media (max-width: 768px) {
+            .bio-info h1 { font-size: 2.2em; }
+            .social-centered { gap: 20px; }
+            .social-centered a i { font-size: 2em; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="card header">
+    <div class="header-card">
         <div class="avatar-container">
-            <img src="huy-avatar.jpg" alt="Dinh-Huy Nguyen" class="avatar" onerror="this.src='https://via.placeholder.com/220?text=Upload+Photo'">
+            <img src="huy-avatar.jpg" alt="Dinh-Huy Nguyen" class="avatar" onerror="this.src='https://via.placeholder.com/220'">
         </div>
-        <div class="bio-text">
+        <div class="bio-info">
             <h1>Dinh-Huy Nguyen, Ph.D.</h1>
-            <p style="font-size: 1.2em; color: #4a5568; margin-top: 5px;"><strong>Research Professor</strong> | Chonnam National University Hwasun Hospital</p>
-            <p>Specialist in <strong>Bacteria-mediated Cancer Immunotherapy</strong>. My research focuses on engineering <em>Salmonella typhimurium</em> as an intelligent drug delivery platform to overcome immune-resistant "cold" tumors and advance the "National Cancer Moonshot" goals.</p>
-            <div class="social-links">
-                <a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                <a href="mailto:nguyenhuybio@gmail.com"><i class="fas fa-envelope"></i> Contact Email</a>
-                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
+            <div class="role-title">Research Professor | Chonnam National University Hwasun Hospital</div>
+            <p class="bio-desc">
+                Specialist in <strong>Bacteria-mediated Cancer Immunotherapy</strong>. I lead research engineering <em>Salmonella typhimurium</em> as a precision delivery platform to overcome immune-resistant solid tumors, directly supporting the <strong>National Cancer Moonshot</strong> initiative.
+            </p>
+        </div>
+
+        <!-- Social Icons To và Căn giữa -->
+        <div class="social-centered">
+            <a href="https://scholar.google.com/citations?user=csk9CtYAAAAJ" target="_blank">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Scholar</span>
+            </a>
+            <a href="mailto:nguyenhuybio@gmail.com">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
         </div>
     </div>
 
-    <h2><i class="fas fa-microscope section-icon"></i> Selected Publications</h2>
-    <div class="card" style="padding: 0 20px;">
+    <!-- Publications Section - Liệt kê đầy đủ hơn -->
+    <h2 id="publications">Publications</h2>
+    <div class="item-list">
         <div class="item">
-            <span class="tag tag-journal">2024</span>
-            <span class="item-title">Reprogramming the tumor immune microenvironment using engineered dual-drug loaded Salmonella</span>
-            <div class="item-meta"><strong>Nature Communications</strong> 15 (1), 6680 | Nguyen D.H., et al. <span class="cite-badge">71 Citations</span></div>
+            <span class="badge badge-journal">2024</span>
+            <a href="https://doi.org/10.1038/s41467-024-51656-w" class="item-title">Reprogramming the tumor immune microenvironment using engineered dual-drug loaded Salmonella</a>
+            <div class="item-meta"><strong>Nature Communications</strong> 15 (1), 6680 | Nguyen D.H., et al. <span class="cite-tag">71 Citations</span></div>
         </div>
         <div class="item">
-            <span class="tag tag-journal">2023</span>
-            <span class="item-title">Bioengineering of bacteria for cancer immunotherapy</span>
-            <div class="item-meta"><strong>Nature Communications</strong> 14 (1), 3553 | Nguyen D.H., et al. <span class="cite-badge">172 Citations</span></div>
+            <span class="badge badge-journal">2023</span>
+            <a href="https://doi.org/10.1038/s41467-023-39257-w" class="item-title">Bioengineering of bacteria for cancer immunotherapy</a>
+            <div class="item-meta"><strong>Nature Communications</strong> 14 (1), 3553 | Nguyen D.H., et al. <span class="cite-tag">172 Citations</span></div>
         </div>
         <div class="item">
-            <span class="tag tag-journal">2022</span>
-            <span class="item-title">Bacteria and bacterial derivatives as delivery carriers for immunotherapy</span>
-            <div class="item-meta">Advanced Drug Delivery Reviews 181, 114085 | Nguyen D.H., et al. <span class="cite-badge">112 Citations</span></div>
+            <span class="badge badge-journal">2022</span>
+            <a href="#" class="item-title">Bacteria and bacterial derivatives as delivery carriers for immunotherapy</a>
+            <div class="item-meta">Advanced Drug Delivery Reviews 181, 114085 | Nguyen D.H., et al. <span class="cite-tag">112 Citations</span></div>
         </div>
         <div class="item">
-            <span class="tag tag-journal">2023</span>
-            <span class="item-title">Synergistic cancer immunotherapy utilizing programmed Salmonella typhimurium secreting flagellin B...</span>
-            <div class="item-meta">Biomaterials 298, 122135 | Nguyen D.H., et al. <span class="cite-badge">40 Citations</span></div>
+            <span class="badge badge-journal">2023</span>
+            <a href="#" class="item-title">Synergistic cancer immunotherapy utilizing programmed Salmonella typhimurium secreting flagellin B...</a>
+            <div class="item-meta">Biomaterials 298, 122135 | Nguyen D.H., et al. <span class="cite-tag">40 Citations</span></div>
+        </div>
+        <div class="item">
+            <span class="badge badge-journal">2022</span>
+            <a href="#" class="item-title">A clinically translatable, irreversibly attenuated Salmonella strain as a next-generation adjuvant...</a>
+            <div class="item-meta">Theranostics 16 (13), 7139 | Nguyen D.H., et al.</div>
+        </div>
+        <div class="item">
+            <span class="badge badge-journal">2022</span>
+            <a href="#" class="item-title">Optimized doxycycline-inducible gene expression system for tumor-targeting bacteria</a>
+            <div class="item-meta">Molecular Imaging and Biology 24 (1), 108-118 | Nguyen D.H., et al.</div>
+        </div>
+        <div class="item">
+            <span class="badge badge-journal">2021</span>
+            <a href="#" class="item-title">Engineering Salmonella typhimurium to deliver therapeutic payloads...</a>
+            <div class="item-meta">Biomedicine & Pharmacotherapy 138, 111436 | Nguyen D.H., et al.</div>
         </div>
     </div>
 
-    <h2><i class="fas fa-file-signature section-icon"></i> Patents & Intellectual Property</h2>
-    <div class="card" style="padding: 0 20px;">
+    <!-- Patents Section - Liệt kê toàn bộ -->
+    <h2 id="patents">Patents & IP</h2>
+    <div class="item-list">
         <div class="item">
-            <span class="tag tag-patent">US Patent (2025)</span>
+            <span class="badge badge-patent">US 2025</span>
             <span class="item-title">Composition Comprising Salmonella Strain and Immune Checkpoint Inhibitor for Treatment of Cancer</span>
-            <div class="item-meta">US20250041355A1 | Min N.D., Nguyen D.H., et al.</div>
+            <div class="item-meta">US Patent Application US20250041355A1 | Min N.D., Nguyen D.H., et al.</div>
         </div>
         <div class="item">
-            <span class="tag tag-patent">US Patent (2024)</span>
+            <span class="badge badge-patent">US 2024</span>
             <span class="item-title">SALMONELLA STRAIN FOR PREVENTION AND TREATMENT OF CANCER</span>
-            <div class="item-meta">US20240390428A1 | Min N.D., Nguyen D.H., et al.</div>
+            <div class="item-meta">US Patent Application US20240390428A1 | Min N.D., Nguyen D.H., et al.</div>
         </div>
         <div class="item">
-            <span class="tag tag-patent">EP Patent (2024)</span>
+            <span class="badge badge-patent">EU 2024</span>
             <span class="item-title">PHARMACEUTICAL COMPOSITION COMPRISING SALMONELLA STRAIN</span>
-            <div class="item-meta">European Patent Office EP4427755A1</div>
+            <div class="item-meta">European Patent EP4427755A1 | Chonnam National University</div>
+        </div>
+        <div class="item">
+            <span class="badge badge-patent">AU 2021</span>
+            <span class="item-title">Salmonella strain for treating cancer and use thereof</span>
+            <div class="item-meta">Australian Patent AU2021376085A1</div>
         </div>
     </div>
 
-    <footer style="text-align: center; color: #718096; padding: 40px 0; font-size: 0.9em;">
-        &copy; 2024 Dinh-Huy Nguyen, Ph.D. | All Rights Reserved.
+    <footer style="text-align: center; margin-top: 80px; padding: 40px 0; border-top: 1px solid #eee; color: var(--text-muted); font-size: 0.9em;">
+        &copy; 2024 Dinh-Huy Nguyen, Ph.D. | Built for Academic Excellence
     </footer>
 
 </body>
